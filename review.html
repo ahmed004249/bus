@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sudan Travel | Review Booking</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/review.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <span class="brand-icon">
+        <span class="brand-window"></span>
+        <span class="brand-wheel brand-wheel-left"></span>
+        <span class="brand-wheel brand-wheel-right"></span>
+      </span>
+
+      <span class="brand-copy">
+        <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+        <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">
+          Book your trip with confidence
+        </small>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a href="seats.html" data-en="Seat Selection" data-ar="اختيار المقعد">Seat Selection</a>
+      <a href="passenger.html" data-en="Passenger Details" data-ar="بيانات المسافر">Passenger Details</a>
+      <a class="active" href="review.html" data-en="Review" data-ar="المراجعة">Review</a>
+    </nav>
+
+    <div id="liveClock" class="live-clock" aria-live="polite"></div>
+
+    <button id="languageButton" class="language-button" type="button">
+      <span>🌐</span>
+      <span id="languageLabel">العربية</span>
+    </button>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="review-hero">
+    <div class="container review-hero-inner">
+      <div>
+        <span class="section-label" data-en="Review Booking" data-ar="مراجعة الحجز">
+          Review Booking
+        </span>
+
+        <h1 data-en="Confirm your booking details" data-ar="تأكد من تفاصيل الحجز">
+          Confirm your booking details
+        </h1>
+
+        <p data-en="Review the trip and passenger information carefully before continuing to payment."
+           data-ar="راجع معلومات الرحلة والمسافر بعناية قبل الانتقال إلى الدفع.">
+          Review the trip and passenger information carefully before continuing to payment.
+        </p>
+      </div>
+
+      <div class="step-badge" data-en="Step 4 of 5" data-ar="الخطوة 4 من 5">
+        Step 4 of 5
+      </div>
+    </div>
+  </section>
+
+  <section class="container review-page">
+
+    <div class="review-progress">
+      <div class="review-progress-item">
+        <span>✓</span>
+        <b data-en="Company" data-ar="الشركة">Company</b>
+      </div>
+
+      <div class="review-progress-line"></div>
+
+      <div class="review-progress-item">
+        <span>✓</span>
+        <b data-en="Trip" data-ar="الرحلة">Trip</b>
+      </div>
+
+      <div class="review-progress-line"></div>
+
+      <div class="review-progress-item">
+        <span>✓</span>
+        <b data-en="Seat" data-ar="المقعد">Seat</b>
+      </div>
+
+      <div class="review-progress-line"></div>
+
+      <div class="review-progress-item">
+        <span>✓</span>
+        <b data-en="Passenger" data-ar="المسافر">Passenger</b>
+      </div>
+
+      <div class="review-progress-line"></div>
+
+      <div class="review-progress-item">
+        <span>5</span>
+        <b data-en="Review" data-ar="المراجعة">Review</b>
+      </div>
+    </div>
+
+    <div class="review-layout">
+
+      <article class="review-card">
+        <div class="review-card-title" data-en="Trip Details" data-ar="تفاصيل الرحلة">
+          Trip Details
+        </div>
+
+        <div class="review-card-body">
+          <ul class="review-list">
+            <li>
+              <span data-en="Company" data-ar="الشركة">Company</span>
+              <strong id="reviewCompany"></strong>
+            </li>
+
+            <li>
+              <span data-en="Route" data-ar="المسار">Route</span>
+              <strong id="reviewRoute"></strong>
+            </li>
+
+            <li>
+              <span data-en="Travel Date" data-ar="تاريخ السفر">Travel Date</span>
+              <strong id="reviewDate"></strong>
+            </li>
+
+            <li>
+              <span data-en="Departure Time" data-ar="وقت المغادرة">Departure Time</span>
+              <strong id="reviewDeparture"></strong>
+            </li>
+
+            <li>
+              <span data-en="Seat Number" data-ar="رقم المقعد">Seat Number</span>
+              <strong id="reviewSeat"></strong>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-card-title" data-en="Passenger Details" data-ar="بيانات المسافر">
+          Passenger Details
+        </div>
+
+        <div class="review-card-body">
+          <ul class="review-list">
+            <li>
+              <span data-en="Full Name" data-ar="الاسم الكامل">Full Name</span>
+              <strong id="reviewFullName"></strong>
+            </li>
+
+            <li>
+              <span data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</span>
+              <strong id="reviewPhone"></strong>
+            </li>
+
+            <li>
+              <span data-en="National ID / Passport" data-ar="الرقم الوطني / الجواز">
+                National ID / Passport
+              </span>
+              <strong id="reviewIdNumber"></strong>
+            </li>
+
+            <li>
+              <span data-en="Gender" data-ar="النوع">Gender</span>
+              <strong id="reviewGender"></strong>
+            </li>
+
+            <li>
+              <span data-en="Emergency Phone" data-ar="هاتف الطوارئ">Emergency Phone</span>
+              <strong id="reviewEmergencyPhone"></strong>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <aside class="review-card price-card">
+        <div class="review-card-title" data-en="Price Summary" data-ar="ملخص السعر">
+          Price Summary
+        </div>
+
+        <div class="review-card-body">
+
+          <div class="reference-box">
+            <span data-en="Temporary Booking Reference" data-ar="رقم الحجز المؤقت">
+              Temporary Booking Reference
+            </span>
+            <strong id="temporaryReference"></strong>
+          </div>
+
+          <div class="price-row">
+            <span data-en="Ticket Price" data-ar="سعر التذكرة">Ticket Price</span>
+            <strong id="ticketPrice"></strong>
+          </div>
+
+          <div class="price-row total">
+            <span data-en="Total" data-ar="الإجمالي">Total</span>
+            <strong id="totalPrice"></strong>
+          </div>
+
+          <div class="terms-box">
+            <input id="termsAccepted" type="checkbox" required>
+
+            <label for="termsAccepted"
+                   data-en="I confirm that all information is correct and I agree to the booking terms and conditions."
+                   data-ar="أؤكد أن جميع البيانات صحيحة وأوافق على شروط وأحكام الحجز.">
+              I confirm that all information is correct and I agree to the booking terms and conditions.
+            </label>
+          </div>
+
+          <div class="review-actions">
+            <a class="secondary-button" href="passenger.html"
+               data-en="Edit Passenger Details" data-ar="تعديل بيانات المسافر">
+              Edit Passenger Details
+            </a>
+
+            <button id="paymentButton" class="primary-button" type="button" disabled
+                    data-en="Continue to Payment" data-ar="متابعة إلى الدفع">
+              Continue to Payment
+            </button>
+          </div>
+
+          <div id="reviewMessage" class="review-message" aria-live="polite"></div>
+
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <section class="footer-brand">
+      <a class="brand footer-logo" href="index.html">
+        <span class="brand-icon footer-brand-icon">
+          <span class="brand-window"></span>
+          <span class="brand-wheel brand-wheel-left"></span>
+          <span class="brand-wheel brand-wheel-right"></span>
+        </span>
+
+        <span class="brand-copy">
+          <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+          <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">
+            Book your trip with confidence
+          </small>
+        </span>
+      </a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a href="seats.html" data-en="Seat Selection" data-ar="اختيار المقعد">Seat Selection</a>
+      <a href="passenger.html" data-en="Passenger Details" data-ar="بيانات المسافر">Passenger Details</a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Contact" data-ar="تواصل معنا">Contact</h4>
+      <p data-en="Customer support is available for booking assistance."
+         data-ar="خدمة العملاء متاحة للمساعدة في الحجز.">
+        Customer support is available for booking assistance.
+      </p>
+    </section>
+
+  </div>
+</footer>
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/review.js"></script>
+</body>
+</html>

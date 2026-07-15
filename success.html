@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sudan Travel | Booking Submitted</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/success.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <span class="brand-icon">
+        <span class="brand-window"></span>
+        <span class="brand-wheel brand-wheel-left"></span>
+        <span class="brand-wheel brand-wheel-right"></span>
+      </span>
+
+      <span class="brand-copy">
+        <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+        <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">
+          Book your trip with confidence
+        </small>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a href="review.html" data-en="Review" data-ar="المراجعة">Review</a>
+      <a href="payment.html" data-en="Payment" data-ar="الدفع">Payment</a>
+      <a class="active" href="success.html" data-en="Booking Status" data-ar="حالة الحجز">Booking Status</a>
+    </nav>
+
+    <div id="liveClock" class="live-clock" aria-live="polite"></div>
+
+    <button id="languageButton" class="language-button" type="button">
+      <span>🌐</span>
+      <span id="languageLabel">العربية</span>
+    </button>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="success-hero">
+    <div class="container">
+      <span class="section-label" data-en="Booking Submitted" data-ar="تم إرسال الحجز">
+        Booking Submitted
+      </span>
+    </div>
+  </section>
+
+  <section class="container success-page">
+
+    <article class="success-card">
+
+      <div class="success-top">
+        <div class="success-icon">✓</div>
+
+        <h1 data-en="Your booking is under review" data-ar="طلب الحجز تحت المراجعة">
+          Your booking is under review
+        </h1>
+
+        <p data-en="We received your booking and payment details successfully. The administration will review your payment before confirming the ticket."
+           data-ar="تم استلام بيانات الحجز والدفع بنجاح. ستقوم الإدارة بمراجعة الدفع قبل تأكيد التذكرة.">
+          We received your booking and payment details successfully.
+        </p>
+
+        <div class="booking-status"
+             data-en="Status: Under Review"
+             data-ar="الحالة: تحت المراجعة">
+          Status: Under Review
+        </div>
+      </div>
+
+      <div class="success-body">
+
+        <div class="reference-panel">
+          <span data-en="Booking Reference" data-ar="رقم الحجز">
+            Booking Reference
+          </span>
+
+          <strong id="successReference"></strong>
+        </div>
+
+        <div class="success-grid">
+
+          <section class="success-section">
+            <h2 data-en="Trip Details" data-ar="تفاصيل الرحلة">Trip Details</h2>
+
+            <ul class="success-list">
+              <li>
+                <span data-en="Company" data-ar="الشركة">Company</span>
+                <strong id="successCompany"></strong>
+              </li>
+
+              <li>
+                <span data-en="Route" data-ar="المسار">Route</span>
+                <strong id="successRoute"></strong>
+              </li>
+
+              <li>
+                <span data-en="Travel Date" data-ar="تاريخ السفر">Travel Date</span>
+                <strong id="successDate"></strong>
+              </li>
+
+              <li>
+                <span data-en="Departure" data-ar="وقت المغادرة">Departure</span>
+                <strong id="successDeparture"></strong>
+              </li>
+
+              <li>
+                <span data-en="Seat" data-ar="المقعد">Seat</span>
+                <strong id="successSeat"></strong>
+              </li>
+            </ul>
+          </section>
+
+          <section class="success-section">
+            <h2 data-en="Passenger and Payment" data-ar="المسافر والدفع">
+              Passenger and Payment
+            </h2>
+
+            <ul class="success-list">
+              <li>
+                <span data-en="Passenger" data-ar="المسافر">Passenger</span>
+                <strong id="successPassenger"></strong>
+              </li>
+
+              <li>
+                <span data-en="Phone" data-ar="رقم الهاتف">Phone</span>
+                <strong id="successPhone"></strong>
+              </li>
+
+              <li>
+                <span data-en="Payment Method" data-ar="طريقة الدفع">Payment Method</span>
+                <strong id="successPaymentMethod"></strong>
+              </li>
+
+              <li>
+                <span data-en="Transaction Number" data-ar="رقم العملية">Transaction Number</span>
+                <strong id="successTransaction"></strong>
+              </li>
+
+              <li>
+                <span data-en="Total" data-ar="الإجمالي">Total</span>
+                <strong id="successTotal"></strong>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
+        <div class="payment-note"
+             data-en="Keep your booking reference. You will use it later to check the booking status after the payment is reviewed."
+             data-ar="احتفظ برقم الحجز، ستستخدمه لاحقاً للتحقق من حالة الحجز بعد مراجعة الدفع.">
+          Keep your booking reference.
+        </div>
+
+        <div class="success-actions">
+          <button id="printButton" class="secondary-button" type="button"
+                  data-en="Print Booking Summary" data-ar="طباعة ملخص الحجز">
+            Print Booking Summary
+          </button>
+
+          <a class="primary-button" href="index.html"
+             data-en="Return to Home" data-ar="العودة للرئيسية">
+            Return to Home
+          </a>
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <section class="footer-brand">
+      <a class="brand footer-logo" href="index.html">
+        <span class="brand-icon footer-brand-icon">
+          <span class="brand-window"></span>
+          <span class="brand-wheel brand-wheel-left"></span>
+          <span class="brand-wheel brand-wheel-right"></span>
+        </span>
+
+        <span class="brand-copy">
+          <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+          <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">
+            Book your trip with confidence
+          </small>
+        </span>
+      </a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a href="payment.html" data-en="Payment" data-ar="الدفع">Payment</a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Contact" data-ar="تواصل معنا">Contact</h4>
+      <p data-en="Customer support is available for booking assistance."
+         data-ar="خدمة العملاء متاحة للمساعدة في الحجز.">
+        Customer support is available for booking assistance.
+      </p>
+    </section>
+
+  </div>
+</footer>
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/success.js"></script>
+</body>
+</html>

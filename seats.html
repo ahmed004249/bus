@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sudan Travel | Choose Seat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/seats.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">
+        <span class="brand-window"></span>
+        <span class="brand-wheel brand-wheel-left"></span>
+        <span class="brand-wheel brand-wheel-right"></span>
+      </span>
+      <span class="brand-copy">
+        <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+        <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">Book your trip with confidence</small>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a class="active" href="seats.html" data-en="Seat Selection" data-ar="اختيار المقعد">Seat Selection</a>
+    </nav>
+
+    <div id="liveClock" class="live-clock" aria-live="polite"></div>
+
+    <button id="languageButton" class="language-button" type="button">
+      <span>🌐</span><span id="languageLabel">العربية</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="seats-hero">
+    <div class="container seats-hero-inner">
+      <div>
+        <span class="section-label" data-en="Seat Selection" data-ar="اختيار المقعد">Seat Selection</span>
+        <h1 data-en="Choose your preferred seat" data-ar="اختر المقعد المناسب لك">Choose your preferred seat</h1>
+        <p data-en="All seats are available initially. Select one seat to reserve it temporarily for ten minutes."
+           data-ar="جميع المقاعد متاحة في البداية. اختر مقعداً واحداً لحجزه مؤقتاً لمدة عشر دقائق.">
+          All seats are available initially.
+        </p>
+      </div>
+
+      <div class="step-badge" data-en="Step 2 of 4" data-ar="الخطوة 2 من 4">Step 2 of 4</div>
+    </div>
+  </section>
+
+  <section class="container seats-layout">
+    <aside class="trip-summary">
+      <div class="trip-summary-title" data-en="Trip Summary" data-ar="ملخص الرحلة">Trip Summary</div>
+      <div class="trip-summary-body">
+        <ul class="summary-list">
+          <li><span data-en="Company" data-ar="الشركة">Company</span><strong id="summaryCompany"></strong></li>
+          <li><span data-en="Route" data-ar="المسار">Route</span><strong id="summaryRoute"></strong></li>
+          <li><span data-en="Travel Date" data-ar="تاريخ السفر">Travel Date</span><strong id="summaryDate"></strong></li>
+          <li><span data-en="Departure" data-ar="وقت المغادرة">Departure</span><strong id="summaryDeparture"></strong></li>
+          <li><span data-en="Price" data-ar="السعر">Price</span><strong id="summaryPrice"></strong></li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="seat-panel">
+      <div class="seat-panel-heading">
+        <h2 data-en="Bus Seat Map" data-ar="خريطة مقاعد البص">Bus Seat Map</h2>
+        <p data-en="Choose one available seat. You can change it before continuing."
+           data-ar="اختر مقعداً متاحاً واحداً، ويمكنك تغييره قبل المتابعة.">
+          Choose one available seat.
+        </p>
+      </div>
+
+      <div class="legend">
+        <span class="legend-item">
+          <i class="legend-color" style="background:#43a047"></i>
+          <b data-en="Available" data-ar="متاح">Available</b>
+        </span>
+        <span class="legend-item">
+          <i class="legend-color" style="background:#2f78b7"></i>
+          <b data-en="Your Selection" data-ar="المقعد المختار">Your Selection</b>
+        </span>
+      </div>
+
+      <div class="bus-map">
+        <div class="bus-front" data-en="Front of the Bus ↑" data-ar="مقدمة البص ↑">Front of the Bus ↑</div>
+        <div class="seat-grid">
+          <button class="seat" type="button" data-seat="1">1</button>
+<button class="seat" type="button" data-seat="2">2</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="3">3</button>
+<button class="seat" type="button" data-seat="4">4</button>
+<button class="seat" type="button" data-seat="5">5</button>
+<button class="seat" type="button" data-seat="6">6</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="7">7</button>
+<button class="seat" type="button" data-seat="8">8</button>
+<button class="seat" type="button" data-seat="9">9</button>
+<button class="seat" type="button" data-seat="10">10</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="11">11</button>
+<button class="seat" type="button" data-seat="12">12</button>
+<button class="seat" type="button" data-seat="13">13</button>
+<button class="seat" type="button" data-seat="14">14</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="15">15</button>
+<button class="seat" type="button" data-seat="16">16</button>
+<button class="seat" type="button" data-seat="17">17</button>
+<button class="seat" type="button" data-seat="18">18</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="19">19</button>
+<button class="seat" type="button" data-seat="20">20</button>
+<button class="seat" type="button" data-seat="21">21</button>
+<button class="seat" type="button" data-seat="22">22</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="23">23</button>
+<button class="seat" type="button" data-seat="24">24</button>
+<button class="seat" type="button" data-seat="25">25</button>
+<button class="seat" type="button" data-seat="26">26</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="27">27</button>
+<button class="seat" type="button" data-seat="28">28</button>
+<button class="seat" type="button" data-seat="29">29</button>
+<button class="seat" type="button" data-seat="30">30</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="31">31</button>
+<button class="seat" type="button" data-seat="32">32</button>
+<button class="seat" type="button" data-seat="33">33</button>
+<button class="seat" type="button" data-seat="34">34</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="35">35</button>
+<button class="seat" type="button" data-seat="36">36</button>
+<button class="seat" type="button" data-seat="37">37</button>
+<button class="seat" type="button" data-seat="38">38</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="39">39</button>
+<button class="seat" type="button" data-seat="40">40</button>
+<button class="seat" type="button" data-seat="41">41</button>
+<button class="seat" type="button" data-seat="42">42</button>
+<div class="aisle"></div>
+<button class="seat" type="button" data-seat="43">43</button>
+<button class="seat" type="button" data-seat="44">44</button>
+        </div>
+      </div>
+
+      <div class="selected-seat-box">
+        <strong id="selectedSeatText" data-en="No seat selected yet" data-ar="لم يتم اختيار مقعد بعد">
+          No seat selected yet
+        </strong>
+      </div>
+
+      <div id="holdTimer" class="hold-timer" aria-live="polite"></div>
+
+      <div class="seat-actions">
+        <button id="backButton" class="secondary-button" type="button"
+          data-en="Back to Trips" data-ar="الرجوع للرحلات">Back to Trips</button>
+
+        <button id="continueButton" class="primary-button" type="button" disabled
+          data-en="Continue" data-ar="متابعة">Continue</button>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <section class="footer-brand">
+      <a class="brand footer-logo" href="index.html">
+        <span class="brand-icon footer-brand-icon">
+          <span class="brand-window"></span>
+          <span class="brand-wheel brand-wheel-left"></span>
+          <span class="brand-wheel brand-wheel-right"></span>
+        </span>
+        <span class="brand-copy">
+          <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+          <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">Book your trip with confidence</small>
+        </span>
+      </a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Contact" data-ar="تواصل معنا">Contact</h4>
+      <p data-en="Customer support is available for booking assistance."
+         data-ar="خدمة العملاء متاحة للمساعدة في الحجز.">
+        Customer support is available for booking assistance.
+      </p>
+    </section>
+  </div>
+</footer>
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/seats.js"></script>
+</body>
+</html>

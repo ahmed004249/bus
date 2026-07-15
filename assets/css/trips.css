@@ -1,0 +1,14 @@
+
+.trips-hero{padding:44px 0;background:linear-gradient(135deg,#f7faff,#edf5fd);border-bottom:1px solid var(--line)}
+.trips-hero-inner{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.trips-company-logo{width:105px;height:105px;display:grid;place-items:center;border-radius:25px;color:#fff;font-size:30px;font-weight:900;box-shadow:0 15px 35px rgba(18,58,109,.16)}
+.trips-company-copy h1{font-size:clamp(32px,4vw,48px)} .trips-company-copy p{margin-top:9px;color:var(--muted);font-size:12px}
+.trips-company-badge{padding:12px 14px;border:1px solid #d7e4f0;border-radius:12px;background:#fff;color:var(--primary);font-size:11px;font-weight:800}
+.trips-section{padding:28px 0 80px}.travel-date-card{padding:18px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end;border:1px solid var(--line);border-radius:15px;background:#fff}
+.field{display:grid;gap:7px}.field label{font-size:11px;font-weight:800}.field input{min-height:46px;padding:0 12px;border:1px solid var(--line);border-radius:10px}
+.show-trips-button,.book-now-button{min-height:46px;padding:0 18px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--secondary),var(--primary));color:#fff;font-size:11px;font-weight:800}
+.after-date-section{display:none;margin-top:18px}.after-date-section.show{display:block}.trips-search{width:100%;min-height:46px;padding:0 13px;border:1px solid var(--line);border-radius:11px}
+.trip-card{display:grid;grid-template-columns:1.25fr .8fr .9fr .8fr 130px;gap:12px;align-items:center;margin-top:13px;padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.trip-main strong{font-size:15px}.trip-main small,.trip-info small{display:block;margin-top:4px;color:var(--muted);font-size:9px}.trip-info strong{font-size:12px}.seats-left{color:#177245}.trip-card.is-hidden{display:none}
+.empty-trips{display:none;margin-top:20px;padding:38px;text-align:center;border:1px dashed #cfdbe8;border-radius:16px}.empty-trips.show{display:block}
+@media(max-width:800px){.trips-hero-inner{grid-template-columns:1fr;text-align:center}.trips-company-logo,.trips-company-badge{margin:auto}.travel-date-card,.trip-card{grid-template-columns:1fr}}

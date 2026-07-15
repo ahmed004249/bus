@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sudan Travel | Payment</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/payment.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <span class="brand-icon">
+        <span class="brand-window"></span>
+        <span class="brand-wheel brand-wheel-left"></span>
+        <span class="brand-wheel brand-wheel-right"></span>
+      </span>
+
+      <span class="brand-copy">
+        <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+        <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">
+          Book your trip with confidence
+        </small>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a href="seats.html" data-en="Seat Selection" data-ar="اختيار المقعد">Seat Selection</a>
+      <a href="passenger.html" data-en="Passenger Details" data-ar="بيانات المسافر">Passenger Details</a>
+      <a href="review.html" data-en="Review" data-ar="المراجعة">Review</a>
+      <a class="active" href="payment.html" data-en="Payment" data-ar="الدفع">Payment</a>
+    </nav>
+
+    <div id="liveClock" class="live-clock" aria-live="polite"></div>
+
+    <button id="languageButton" class="language-button" type="button">
+      <span>🌐</span>
+      <span id="languageLabel">العربية</span>
+    </button>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="payment-hero">
+    <div class="container payment-hero-inner">
+      <div>
+        <span class="section-label" data-en="Payment" data-ar="الدفع">
+          Payment
+        </span>
+
+        <h1 data-en="Choose your payment method" data-ar="اختر طريقة الدفع">
+          Choose your payment method
+        </h1>
+
+        <p data-en="Select a payment method, transfer the amount, and submit the required payment details."
+           data-ar="اختر طريقة الدفع، حوّل المبلغ، ثم أدخل بيانات الدفع المطلوبة.">
+          Select a payment method, transfer the amount, and submit the required payment details.
+        </p>
+      </div>
+
+      <div class="step-badge" data-en="Step 5 of 5" data-ar="الخطوة 5 من 5">
+        Step 5 of 5
+      </div>
+    </div>
+  </section>
+
+  <section class="container payment-page">
+    <div class="payment-layout">
+
+      <aside class="payment-summary">
+        <div class="payment-summary-title" data-en="Booking Summary" data-ar="ملخص الحجز">
+          Booking Summary
+        </div>
+
+        <div class="payment-summary-body">
+          <ul class="payment-summary-list">
+            <li>
+              <span data-en="Company" data-ar="الشركة">Company</span>
+              <strong id="summaryCompany"></strong>
+            </li>
+
+            <li>
+              <span data-en="Route" data-ar="المسار">Route</span>
+              <strong id="summaryRoute"></strong>
+            </li>
+
+            <li>
+              <span data-en="Travel Date" data-ar="تاريخ السفر">Travel Date</span>
+              <strong id="summaryDate"></strong>
+            </li>
+
+            <li>
+              <span data-en="Departure" data-ar="وقت المغادرة">Departure</span>
+              <strong id="summaryDeparture"></strong>
+            </li>
+
+            <li>
+              <span data-en="Seat" data-ar="المقعد">Seat</span>
+              <strong id="summarySeat"></strong>
+            </li>
+
+            <li>
+              <span data-en="Passenger" data-ar="المسافر">Passenger</span>
+              <strong id="summaryPassenger"></strong>
+            </li>
+
+            <li>
+              <span data-en="Total" data-ar="الإجمالي">Total</span>
+              <strong id="summaryTotal"></strong>
+            </li>
+          </ul>
+
+          <div class="reference-mini">
+            <span data-en="Booking Reference" data-ar="رقم الحجز">Booking Reference</span>
+            <strong id="summaryReference"></strong>
+          </div>
+        </div>
+      </aside>
+
+      <section class="payment-card">
+        <h2 data-en="Payment Methods" data-ar="طرق الدفع">Payment Methods</h2>
+
+        <p data-en="Choose one method below to view the account information and payment form."
+           data-ar="اختر إحدى الطرق أدناه لعرض معلومات الحساب ونموذج الدفع.">
+          Choose one method below to view the account information and payment form.
+        </p>
+
+        <div class="payment-methods">
+          <button class="payment-method" type="button" data-method="bankak">
+            <span class="payment-method-icon">📱</span>
+            <strong data-en="Bankak" data-ar="بنكك">Bankak</strong>
+          </button>
+
+          <button class="payment-method" type="button" data-method="fawry">
+            <span class="payment-method-icon">⚡</span>
+            <strong data-en="Fawry" data-ar="فوري">Fawry</strong>
+          </button>
+
+          <button class="payment-method" type="button" data-method="cashi">
+            <span class="payment-method-icon">💵</span>
+            <strong data-en="Cashi" data-ar="كاشي">Cashi</strong>
+          </button>
+
+          <button class="payment-method" type="button" data-method="bank-transfer">
+            <span class="payment-method-icon">🏦</span>
+            <strong data-en="Bank Transfer" data-ar="تحويل بنكي">Bank Transfer</strong>
+          </button>
+        </div>
+
+        <div id="paymentDetails" class="payment-details">
+
+          <div id="bankSelectorWrap" class="payment-form full" style="display:none">
+            <div class="full">
+              <label for="bankSelector" data-en="Select Bank" data-ar="اختر البنك">
+                Select Bank
+              </label>
+
+              <select id="bankSelector">
+                <option value="bok" data-en="Bank of Khartoum" data-ar="بنك الخرطوم">
+                  Bank of Khartoum
+                </option>
+
+                <option value="faisal" data-en="Faisal Islamic Bank" data-ar="بنك فيصل الإسلامي">
+                  Faisal Islamic Bank
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="account-box">
+            <div class="account-grid">
+              <div class="account-item">
+                <span data-en="Account Name" data-ar="اسم الحساب">Account Name</span>
+                <strong id="accountName"></strong>
+              </div>
+
+              <div class="account-item">
+                <span data-en="Account Number" data-ar="رقم الحساب">Account Number</span>
+                <strong id="accountNumber"></strong>
+              </div>
+            </div>
+
+            <button id="copyAccountButton" class="copy-button" type="button"
+                    data-en="Copy Account Number" data-ar="نسخ رقم الحساب">
+              Copy Account Number
+            </button>
+          </div>
+
+          <form id="paymentForm" class="payment-form">
+
+            <div class="full">
+              <label for="transactionNumber">
+                <span data-en="Transaction Number" data-ar="رقم العملية">Transaction Number</span>
+                <span class="required">*</span>
+              </label>
+
+              <input id="transactionNumber" type="text" required minlength="4" maxlength="40">
+            </div>
+
+            <div class="full">
+              <label for="paymentProof">
+                <span data-en="Payment Proof Image" data-ar="صورة إثبات الدفع">Payment Proof Image</span>
+                <span class="required">*</span>
+              </label>
+
+              <input id="paymentProof" type="file" accept="image/png,image/jpeg,image/webp" required>
+            </div>
+
+            <div class="payment-actions">
+              <a class="secondary-button" href="review.html"
+                 data-en="Back to Review" data-ar="الرجوع للمراجعة">
+                Back to Review
+              </a>
+
+              <button id="submitPaymentButton" class="primary-button" type="submit"
+                      data-en="Submit Booking" data-ar="إرسال الحجز">
+                Submit Booking
+              </button>
+            </div>
+
+          </form>
+
+          <div id="paymentMessage" class="payment-message" aria-live="polite"></div>
+        </div>
+
+      </section>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <section class="footer-brand">
+      <a class="brand footer-logo" href="index.html">
+        <span class="brand-icon footer-brand-icon">
+          <span class="brand-window"></span>
+          <span class="brand-wheel brand-wheel-left"></span>
+          <span class="brand-wheel brand-wheel-right"></span>
+        </span>
+
+        <span class="brand-copy">
+          <strong data-en="Sudan Travel" data-ar="سفر السودان">Sudan Travel</strong>
+          <small data-en="Book your trip with confidence" data-ar="احجز رحلتك بكل ثقة">
+            Book your trip with confidence
+          </small>
+        </span>
+      </a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="trips.html" data-en="Trips" data-ar="الرحلات">Trips</a>
+      <a href="review.html" data-en="Review" data-ar="المراجعة">Review</a>
+    </section>
+
+    <section class="footer-column">
+      <h4 data-en="Contact" data-ar="تواصل معنا">Contact</h4>
+      <p data-en="Customer support is available for booking assistance."
+         data-ar="خدمة العملاء متاحة للمساعدة في الحجز.">
+        Customer support is available for booking assistance.
+      </p>
+    </section>
+
+  </div>
+</footer>
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/payment.js"></script>
+</body>
+</html>
